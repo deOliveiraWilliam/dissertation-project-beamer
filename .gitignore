@@ -1,0 +1,30 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.nav
+*.out
+*.snm
+*.toc
+*.vrb
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.blg
+*.bbl
+
+# Compiled output
+*.dvi
+*.pdf
+*.ps
+*.xml
+
+# Backup files
+*~
+*.backup
+
+# Other files
+*.synctex.gz
+*.synctex(busy)
+*.synctex.gz(busy)
+.DS_Store

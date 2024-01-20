@@ -1,0 +1,100 @@
+\documentclass[aspectratio=169]{beamer}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{tribhuvan}
+
+% other packages
+\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+\usepackage{subcaption}
+\usepackage[brazil]{babel}  
+
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{references.bib}
+
+\author{William de Oliveira}
+\title[Introdução à Comunicação Científica e Projeto]{Estudo Numérico da Dinâmica de Corridas de Lama em Canal Aberto e Sua Interação com Obstáculos Submersos}
+\subtitle{}
+\institute{UFRGS | PROMEC | MEC-153}
+\date{Janeiro, 2024}
+
+
+% defs
+\def\cmd#1{\texttt{\color{red}\footnotesize $\backslash$#1}}
+\def\env#1{\texttt{\color{blue}\footnotesize #1}}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{halfgray}{gray}{0.55}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{deepblue},
+    emphstyle=\ttfamily\color{deepred},    % Custom highlighting style
+    stringstyle=\color{deepgreen},
+    numbers=left,
+    numberstyle=\small\color{halfgray},
+    rulesepcolor=\color{red!20!green!20!blue!20},
+    frame=shadowbox,
+}
+
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+    \vspace{-10pt}
+    \begin{figure}
+        \centering
+        \begin{minipage}[c][0.2\textheight][c]{0.24\textwidth}
+            \centering
+            \includegraphics[height=0.24\textheight]{images/logos/ufrgs.png}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[c][0.2\textheight][c]{0.24\textwidth}
+            \centering
+            \includegraphics[height=0.18\textheight]{images/logos/promec.png}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[c][0.2\textheight][c]{0.24\textwidth}
+            \centering
+            \includegraphics[height=0.16\textheight]{images/logos/capes.pdf}
+        \end{minipage}
+        \hfill
+        \begin{minipage}[c][0.2\textheight][c]{0.24\textwidth}
+            \centering
+            \includegraphics[height=0.10\textheight]{images/logos/reosul.png}
+        \end{minipage}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \tableofcontents[sectionstyle=show,subsectionstyle=show/shaded/hide,subsubsectionstyle=show/shaded/hide]
+\end{frame}
+
+
+\input{sections/section-1}
+
+\input{sections/section-2}
+
+\input{sections/section-3}
+
+\input{sections/section-4}
+
+\input{sections/section-5}
+
+\input{sections/section-6}
+
+\input{sections/section-7}
+
+\begin{frame}[allowframebreaks]
+    \printbibliography
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        {\Huge Perguntas?}
+    \end{center}
+\end{frame}
+
+\end{document}
