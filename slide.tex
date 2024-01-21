@@ -7,6 +7,9 @@
 \usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra}
 \usepackage{graphicx,pstricks,listings,stackengine}
 \usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{bm}
+\usepackage{booktabs}
 \usepackage[brazil]{babel}  
 
 \usepackage[backend=biber,style=numeric]{biblatex}
@@ -38,7 +41,20 @@
     frame=shadowbox,
 }
 
-
+% Notation:
+\newcommand{\shearrate}{\dot{\gamma}}
+\newcommand{\partialderiv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\inlinepartialderiv}[2]{\nicefrac{\partial #1}{\partial #2}}
+\newcommand{\velvector}{\bm{u}}
+\newcommand{\viscosstresstensor}{\bm{\tau}}
+\newcommand{\strainratetensor}{\bm{D}}
+\newcommand{\stresstensor}{\bm{T}}
+\newcommand{\xvelocity}{u}
+\newcommand{\yvelocity}{v}
+\newcommand{\zvelocity}{w}
+\newcommand{\hb}{Herschel-Bulkley}
+\newcommand{\yieldstress}{\tau_c}
+\newcommand{\surftension}{\sigma_S}
 \begin{document}
 
 \begin{frame}

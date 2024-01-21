@@ -1,1 +1,81 @@
 \section{Metodologia Numérica}
+
+\begin{frame}{Geração das Geometrias}
+    \begin{minipage}[c]{0.55\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../dissertation-project/fig/diagrams/stl_python.png}
+        \captionof{figure}{Algoritmo de geração das geometrias.}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.36\textwidth}
+        \begin{enumerate}
+            \item asdfasd
+            \item asdf
+        \end{enumerate}
+    \end{minipage}
+    \end{frame}
+
+\begin{frame}{Geometria}
+    \begin{minipage}[c]{0.58\textwidth}
+        \includegraphics[width=\textwidth]{../dissertation-project/fig/svgs/geometry.pdf}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.38\textwidth}
+        \captionof{figure}{
+            Exemplos das geometrias (canais) geradas para cada tipo de obstáculo.\\ 
+            (a) Obstáculo retangular.\\ 
+            (b) Obstáculo triangular.\\ 
+            (c) Obstáculo semicircular.}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}{Condições de Contorno}
+    \begin{minipage}[c]{0.45\textwidth}
+            \begin{table}[ht]
+                \centering
+                \caption{Condições de Contorno para a geometria inicial proposta.}
+                \scriptsize
+                \begin{tabular}{llll}
+                \toprule
+                Boundary                                                                       & Field    & Type      & Value \\ 
+                \midrule
+                \multirow{3}{*}{Inlet}                                                         & $\alpha$ & Dirichlet & $ \alpha = 1 $                                   \\ 
+                                                                                               & $p$      & Neumann   & $\bm{n} \cdot \nabla p = 0 $                     \\  
+                                                                                               & $U$      & Dirichlet & $ u = u_0 $                                      \\ 
+                \midrule
+                \multirow{3}{*}{Outlet}                                                        & $\alpha$ & Dirichlet & $ \alpha = 1 $                                   \\ 
+                                                                                               & $p$      & Dirichlet & $ p = 0 $                                        \\  
+                                                                                               & $U$      & Neumann   & $\bm{n} \cdot \nabla \velvector = 0 $            \\
+                \midrule
+                \multirow{3}{*}{Obstacle}                                                      & $\alpha$ & Neumann   & $ \alpha = 0 $                                   \\ 
+                                                                                               & $p$      & Neumann   & $\bm{n} \cdot \nabla p = 0 $                     \\  
+                                                                                               & $U$      & Dirichlet & $ u(y=0) = 0 $                                   \\
+                \midrule
+                \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Walls,\\ Bottom Walls\end{tabular}} & $\alpha$ & Neumann   & $ \alpha = 0 $                                   \\ 
+                                                                                               & $p$      & Neumann   & $ \bm{n} \cdot \nabla p = 0 $                    \\  
+                                                                                               & $U$      & Dirichlet & $ u(y=0) = 0 $                                   \\
+                \bottomrule
+                \end{tabular} \label{tab:boundary_conditions}
+                \end{table}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.50\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../dissertation-project/fig/png/bc_paraview.png}
+        \captionof{figure}{Condições de Contorno.}
+    \end{minipage}
+\end{frame}
+
+\begin{frame}{Malha Numérica}
+    \begin{minipage}[c]{0.68\textwidth}
+        \includegraphics[width=\textwidth]{../dissertation-project/fig/svgs/mesh.pdf}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.30\textwidth}
+        \captionof{figure}{
+            Malha numérica do canal com obstáculo semicircular. Destaque para o
+            maior nível de refinamento no obstáculo, nas paredes adjacentes ao 
+            obstáculo e na região de superfície livre do escoamento.}
+    \end{minipage}
+\end{frame}
