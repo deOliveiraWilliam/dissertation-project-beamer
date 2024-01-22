@@ -1,35 +1,93 @@
 \section{Definição do Problema}
 
 \subsection{Movimentos de Massa}
+\begin{frame}{Movimentos de Massa}
+    Tipos de movimentos:
+    \vspace{.25cm}
+    \begin{itemize}
+        \item Desmoronamentos;
+        \item Tombamentos;
+        \item Deslizamento;
+        \item Corridas detríticas;
+        \item Corridas de lama.
+    \end{itemize}
+\end{frame}
 
 \begin{frame}{Movimentos de Massa}
-    \begin{figure}
+    \begin{table}[ht]
         \centering
-        \includegraphics[width=0.55\textwidth]{../dissertation-project/fig/diagrams/rheological_classification_english.pdf}
-        \caption{Classificação dos movimentos de massa em encostas íngremes, como função
+        \captionof{table}{Magnitude e mobilidade dos movimentos de massa\footnote{Fonte: \cite{takahashi_debris_2014}}.}
+        \small
+        \begin{tabular}{lccc}
+                \hline
+                Fenômeno                & Volume deslocado                                             & Velocidade                             & Distância máxima \\
+                                        & (\SI{}{\cubic\meter})                                & (\unit[per-mode = symbol]{\metre\per\second})                                 & (\SI{}{\kilo \meter})             \\ \hline
+                Deslizamento de terra   & 10 $\sim$ 10\textsuperscript{6}                       & 10\textsuperscript{-6} $\sim$ 10       & $<$ 0,3          \\
+                Desmoronamento          & 2 $\times$ 10\textsuperscript{5}                      & \textemdash                                     & 0,7              \\
+                Corridas Detríticas     & 10\textsuperscript{3} $\sim$ 10\textsuperscript{6}    & 0,5 $\sim$ 20                          & 0,2 $\sim$ 10    \\
+                Avalanches Detríticas   & 10\textsuperscript{7} $\sim$ 10\textsuperscript{10}   & 10 $\sim$ 10\textsuperscript{2}        & < 30             \\
+                    \hline
+            \end{tabular}
+            \label{tab:mov_massa_magnitude}
+        \end{table}
+\end{frame}
+
+\subsection{Classificação dos Movimentos}
+
+\begin{frame}{Movimentos de Massa}
+    \begin{minipage}[c]{0.70\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../dissertation-project/fig/diagrams/rheological_classification_english.pdf}
+    \end{minipage}
+    \hfill    
+    \begin{minipage}[c]{0.28\textwidth}
+        \captionof{figure}{Classificação dos movimentos de massa em encostas íngremes, como função
         da porção sólida e do tipo de material. Adaptado de \cite{coussot_recognition_1996}.}
-    \end{figure}
+    \end{minipage}
 \end{frame}
 
 
 \subsection{Escoamento em Canais}
 
 \begin{frame}{Escoamento em canais}
-    
-    \begin{minipage}[c]{0.60\textwidth}
+    \begin{itemize}
+        \item Canal aberto (superfície livre)
+    \end{itemize}    
+    \begin{minipage}[c]{0.50\textwidth}
         \centering
         \includegraphics[width=\textwidth]{../dissertation-project/fig/diagrams/channel_section.pdf}
-        \captionof{figure}{Your Image Caption}
+        \captionof{figure}{Diagrama com seção transversal de um canal genérico.}
     \end{minipage}
     \hfill
+    \pause
     \begin{minipage}[c]{0.36\textwidth}
-        Your text goes here. You can add as much text as you need, and it will be formatted to fit within this portion of the slide.
+        \begin{itemize}
+            \item Seção Retangular
+        \end{itemize}
+            \vspace{0.25cm}
+            \centering
+            \includegraphics[width=0.5\textwidth]{../dissertation-project/fig/diagrams/cross_section_rectangular.pdf}
+            \captionof{figure}{Canal retangular.}
+        \vspace{0.50cm}
+        
+        \begin{itemize}
+            \item Raio hidráulico
+        \end{itemize}
+        \vspace{0.25cm}
+        \begin{equation}
+            R_h = \frac{Bh}{B+2h}
+        \end{equation}
     \end{minipage}
-    
-    \end{frame}
+\end{frame}
 
-\subsection{Equacionamento}
+\subsection{Hipóteses de Simplificação}
 
-\begin{frame}
-    afd
+\begin{frame}{Hipóteses de Simplificação}
+    \begin{itemize}
+        \item Escoamento uniforme;
+        \item Escoamento laminar;
+        \item Canal aberto;
+        \item Teoria de águas rasas;
+        \item Canal infinitamente largo.
+    \end{itemize}
 \end{frame}

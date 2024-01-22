@@ -2391,8 +2391,9 @@
     <bcf:citekey order="26" intorder="1">Ag_Brasil</bcf:citekey>
     <bcf:citekey order="27" intorder="1">national_news</bcf:citekey>
     <bcf:citekey order="28" intorder="1">G1_gramado1</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">coussot_recognition_1996</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">takahashi_debris_2014</bcf:citekey>
     <bcf:citekey order="30" intorder="1">coussot_recognition_1996</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">coussot_recognition_1996</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
