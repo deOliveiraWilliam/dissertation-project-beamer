@@ -1,5 +1,41 @@
 \section{Metodologia Numérica}
 
+\begin{frame}{Metodologia Numérica}
+    \begin{itemize}
+        \item Método dos Volumes Finitos; \pause
+        \item OpenFOAM; \pause
+        \item cfMesh; \pause
+        \item Método VOF; \pause
+        \item Modelo bi-viscoso; \pause
+        \item interFoam solver; \pause
+        \item Automatização Python e Bash.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Método VOF}
+    O método Volume de Fluido, no inglês \textit{Volume of Fluid} (VOF), é usado para capturar a superfície livre do escoamento. A dependência temporal da fase $\alpha$, para um problema bidimensional, é governada pela Eq.~\ref{eq:alpha_phase}.
+
+    \begin{equation} \label{eq:alpha_phase}
+        \partialderiv{\alpha}{t} + u \partialderiv{\alpha}{x} + v \partialderiv{\alpha}{y} = 0
+    \end{equation}
+
+\end{frame}
+
+\begin{frame}{Método VOF} 
+    \centering
+    \includegraphics[width=0.68\textwidth]{images/vof.pdf}
+    \captionof{figure}{Valor da fase $\alpha$ no respectivo volume finito.}
+\end{frame}
+
+\begin{frame}{Modelo bi-viscoso}
+    Para baixas taxas de deformação, o material é modelado como um fluido de alta viscosidade, com valor constante $\eta_0$. Equação~\ref{eq:bi-viscous}.
+
+    \begin{equation} \label{eq:bi-viscous}
+        \eta = min \left( \eta_0 \hspace{0.2cm} , \hspace{0.2cm} \frac{\tau_0}{\shearrate} + K\shearrate^{n-1}  \right)
+    \end{equation}
+
+\end{frame}
+
 \begin{frame}{Geração das Geometrias}
     \begin{minipage}[c]{0.55\textwidth}
         \centering
@@ -7,13 +43,21 @@
         \captionof{figure}{Algoritmo de geração das geometrias.}
     \end{minipage}
     \hfill
-    \begin{minipage}[c]{0.36\textwidth}
+    \begin{minipage}[c]{0.43\textwidth}
+        Etapas:
+        \vspace{.25cm}
         \begin{enumerate}
-            \item asdfasd
-            \item asdf
+            \item Vértices frontais sem obstáculo; \pause
+            \item Referência dos obstáculos; \pause
+            \item Inserir obstáculo, 3 objetos; \pause
+            \item Vértices posteriores por offset; \pause
+            \item Ligação dos vértices; \pause
+            \item Criação das faces; \pause
+            \item Geração dos arquivos em STL.
         \end{enumerate}
     \end{minipage}
     \end{frame}
+
 
 \begin{frame}{Geometria}
     \begin{minipage}[c]{0.58\textwidth}
