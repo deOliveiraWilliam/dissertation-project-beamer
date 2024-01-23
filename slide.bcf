@@ -2394,6 +2394,8 @@
     <bcf:citekey order="29" intorder="1">takahashi_debris_2014</bcf:citekey>
     <bcf:citekey order="30" intorder="1">coussot_recognition_1996</bcf:citekey>
     <bcf:citekey order="31" intorder="1">coussot_recognition_1996</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">coussot_1997_mudflow</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">coussot_1997_mudflow</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

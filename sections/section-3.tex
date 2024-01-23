@@ -1,97 +1,101 @@
 \section{Reologia}
 
-\begin{frame}{Examples}
-    \begin{exampleblock}{Numbered Equation}
-        \begin{equation} % Add * to remove numbering
-            J(\theta) = \mathbb{E}_{\pi_\theta}[G_t] = \sum_{s\in\mathcal{S}} d^\pi (s)V^\pi(s)=\sum_{s\in\mathcal{S}} d^\pi(s)\sum_{a\in\mathcal{A}}\pi_\theta(a|s)Q^\pi(s,a)
+\subsection{Fluidos não newtonianos}
+\begin{frame}{Fluidos não newtonianos}
+    \includegraphics[width=\textwidth]{../dissertation-project/fig/diagrams/fluid_classification.pdf}
+    \captionof{figure}{Fluidos não newtonianos. (a) Curvas se fluidos
+    viscoplásticos. (b) Fluidos Puramente Viscosos. (c) Teste de taxa de deformação
+    constante.}
+\end{frame}
+
+\subsection{Equacionamento}
+\begin{frame}
+    \begin{exampleblock}{Conservação da Massa}
+        \begin{equation}
+            \partialderiv{\rho}{t} + \nabla \cdot \rho \bm{u} = 0
         \end{equation}
     \end{exampleblock}
-    \begin{exampleblock}{Multi-line Equation\footnote{This is a footnote}}
-        % Use & to separate
-        \begin{align}
-            Q_\mathrm{target}&=r+\gamma Q^\pi(s^\prime, \pi_\theta(s^\prime)+\epsilon)\\
-            \epsilon&\sim\mathrm{clip}(\mathcal{N}(0, \sigma), -c, c)\nonumber
-        \end{align}
+
+    \begin{exampleblock}{Conservação de \textit{Momentum}}
+        \begin{equation}
+            \rho \left( \partialderiv{\bm{u}}{t}  + \bm{u} \cdot \nabla \bm{u} \right) =
+            \bm{b} + \nabla \cdot \bm{T}
+        \end{equation}
     \end{exampleblock}
+
+    \hspace{0.5cm} Definindo o tensor de tensão como $\bm{T} = -p\bm{I} + \bm{\tau}$ e a 
+    aceleração gravitacional como a única força externa aplicada ao fluido:
+        \vspace{0.25cm}
+        \begin{equation}
+            \rho \left( \partialderiv{\bm{u}}{t}  + \bm{u} \cdot \nabla \bm{u} \right) =
+            -\nabla p + \nabla \cdot \bm{\tau} + \rho \bm{g}
+        \end{equation}
 \end{frame}
 
-\begin{frame}
-    \begin{exampleblock}{Numbered Multi-line Equation}
-        % Taken from Mathmode.tex
-        \begin{multline}
-            A=\lim_{n\rightarrow\infty}\Delta x\left(a^{2}+\left(a^{2}+2a\Delta x+\left(\Delta x\right)^{2}\right)\right.\label{eq:reset}\\
-            +\left(a^{2}+2\cdot2a\Delta x+2^{2}\left(\Delta x\right)^{2}\right)\\
-            +\left(a^{2}+2\cdot3a\Delta x+3^{2}\left(\Delta x\right)^{2}\right)\\
-            +\ldots\\
-            \left.+\left(a^{2}+2\cdot(n-1)a\Delta x+(n-1)^{2}\left(\Delta x\right)^{2}\right)\right)\\
-            =\frac{1}{3}\left(b^{3}-a^{3}\right)
-        \end{multline}
-    \end{exampleblock}
-\end{frame}
 
-\begin{frame}{Graph and Columns}
-    % From thuthesis user guide.
-    %\begin{minipage}[c]{0.3\linewidth}
-     %   \psset{unit=0.8cm}
-      %  \begin{pspicture}(-1.75,-3)(3.25,4)
-       %     \psline[linewidth=0.25pt](0,0)(0,4)
-        %    \rput[tl]{0}(0.2,2){$\vec e_z$}
-         %  \rput[tl]{0}(2.8,-1.1){$\vec C_{ptm{ext}}$}
-          %  \rput[br]{0}(-0.3,2.1){$\theta$}
-           % \rput{25}(0,0){%
-            %\psframe[fillstyle=solid,fillcolor=lightgray,linewidth=.8pt](-0.1,-3.2)(0.1,0)}
-            %\rput{25}(0,0){%
-            %\psellipse[fillstyle=solid,fillcolor=yellow,linewidth=3pt](0,0)(1.5,0.5)}
-            %\rput{25}(0,0){%
-            %\psframe[fillstyle=solid,fillcolor=lightgray,linewidth=.8pt](-0.1,0)(0.1,3.2)}
-            %\rput{25}(0,0){\psline[linecolor=red,linewidth=1.5pt]{->}(0,0)(0.,2)}
-%           \psRotation{0}(0,3.5){$\dot\phi$}
-%           \psRotation{25}(-1.2,2.6){$\dot\psi$}
-            %\psline[linecolor=red,linewidth=1.25pt]{->}(0,0)(0,2)
-%            \psline[linecolor=red,linewidth=1.25pt]{->}(0,0)(3,-1)
- %           \psline[linecolor=red,linewidth=1.25pt]{->}(0,0)(2.85,-0.95)
-  %          \psarc{->}{2.1}{90}{112.5}
-   %         \rput[bl](.1,.01){C}
-    %    \end{pspicture}
-    %\end{minipage}
-    \hspace{1cm}
-    \begin{minipage}{0.5\linewidth}
-        \medskip
-        %\hspace{2cm}
-        \begin{figure}[h]
-            \centering
-            \includegraphics[height=.4\textheight]{images/dtmf.pdf}
-        \end{figure}
+\subsection{Fluido HB em Plano Inclinado}
+
+\begin{frame}{Fluido HB em Plano Inclinado}
+    \begin{minipage}[c]{0.49\textwidth}
+        \begin{exampleblock}{Plano inclinado, bidimensional}
+            \includegraphics[width=\textwidth]{../dissertation-project/fig/diagrams/free-surface_inclined-plane.pdf}
+            \captionof{figure}{Escoamento de superfície livre de altura $h$ em um plano infinitamente largo, com
+            velocidade uniforme.}
+        \end{exampleblock}
     \end{minipage}
-    \end{frame}
+    \hfill
+    \begin{minipage}[c]{0.49\textwidth}
+        \begin{exampleblock}{Plano inclinado, "tridimensional"}
+            \includegraphics[width=\textwidth]{../dissertation-project/fig/diagrams/free-surface-obstacle.pdf}
+            \captionof{figure}{Escoamento incidindo sobre um corpo submerso retangular ao fundo do canal, com velocidade $u(y)$.}
+        \end{exampleblock}
+    \end{minipage}
+\end{frame}
 
-\begin{frame}[fragile]{Common \LaTeX{} Commands}
-    \begin{exampleblock}{Commands}
-        \centering
-        \footnotesize
-        \begin{tabular}{llll}
-            \cmd{chapter} & \cmd{section} & \cmd{subsection} & \cmd{paragraph} \\
-            Chapter & Section & Subsection & Paragraph \\\hline
-            \cmd{centering} & \cmd{emph} & \cmd{verb} & \cmd{url} \\
-            Centering & Emphasis & Verbatim & URL \\\hline
-            \cmd{footnote} & \cmd{item} & \cmd{caption} & \cmd{includegraphics} \\
-            Footnote & Item & Caption & Graphics \\\hline
-            \cmd{label} & \cmd{cite} & \cmd{ref} \\
-            Label & Cite & Reference\\\hline
-        \end{tabular}
-    \end{exampleblock}
-    \begin{exampleblock}{Environments}
-        \centering
-        \footnotesize
-        \begin{tabular}{lll}
-            \env{table} & \env{figure} & \env{equation}\\
-            Table & Figure & Equation \\\hline
-            \env{itemize} & \env{enumerate} & \env{description}\\
-            Unnumbered List & Numbered List & Description \\\hline
-        \end{tabular}
+\begin{frame}
+    \begin{exampleblock}{Modelo de fluido tipo HB}
+        \begin{equation}
+            \label{eq:HB_shear_stress}
+            \begin{split}
+                \tau &= \yieldstress + K \shearrate^n
+                \text{ ,\hspace{0.5 cm} quando \hspace{0.2cm}} \shearrate = \partialderiv{u}{y} \ne 0
+                \\
+                |\tau| &\leq \yieldstress
+                \text{ ,\hspace{1.65cm} quando \hspace{0.2cm}} \shearrate = 0
+            \end{split}
+        \end{equation}
     \end{exampleblock}
 \end{frame}
 
 \begin{frame}
-    Reynolds HB
+    \hspace{0.5cm} Em regime permanente, a equação de \textit{momentum} fica:
+    \begin{equation}
+        \begin{split}
+            \partialderiv{\tau}{y} + \rho g \sin{\theta} &= 0 \\
+            -\partialderiv{p}{y} - \rho g \cos{\theta} &= 0
+        \end{split}
+        \label{eq:motion_steady_state_partial}
+    \end{equation}
+
+    \hspace{0.5cm} Integrando e usando as condições de contorno da superfície livre e não deslizamento na parede:
+    \begin{equation}
+        \begin{split}
+            u(y) &= \frac{\alpha}{m+1} \left[y_0^{(m+1)} - {(y_0-y)}^{(m+1)}\right]
+            \hspace{0.5cm} \text{quando} \hspace{0.5cm} y \leq y_0
+            \\
+            u(y) &= u(y_0) = \frac{\alpha}{m+1} \left[ y_0^{(m+1)} \right]
+            \hspace{1.9cm} \text{quando} \hspace{0.5cm} h \geq y \geq y_0
+        \end{split}
+        \label{eq:velocity_distribution}
+    \end{equation}
+    
+    com $m=\frac{1}{n}$, $y_0 = h - \frac{\yieldstress}{\rho g \sin{\theta}}$ e $\alpha = \left({\frac{\rho g \sin{\theta}}{K}}\right)^m$.
+\end{frame}
+
+\begin{frame}
+    \begin{exampleblock}{Perfil de velocidade de um fluido tipo HB}
+        \centering
+        \includegraphics[width=0.55\textwidth]{../dissertation-project/fig/diagrams/HB_velocity-distribution_inclined-plane.pdf}
+        \captionof{figure}{Distribuição de velocidade ao longo da seção transversal, para diferentes valores de $n$. Adaptado de \cite{coussot_1997_mudflow}.}
+    \end{exampleblock}
 \end{frame}
