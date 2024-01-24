@@ -2,21 +2,35 @@
 
 \subsection{Contextualização}
 
-\begin{frame}{Contextualização}
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.5\textwidth]{../dissertation-project/fig/disasters_data/world_2000-2023_riskType.pdf}
-        \caption{Quatro principais tipos de risco, em número de ocorrências, envolvendo
-        desastres naturais, anos de 1900 a 2023. Dados de \cite{emdat_2023}.}
-    \end{figure}
-\end{frame}
 
+\begin{frame}{Contextualização}
+    \begin{minipage}[c]{0.49\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{../dissertation-project/fig/disasters_data/world_2000-2023_riskType.pdf}
+            \caption{Quatro principais tipos de risco, em número de ocorrências, envolvendo
+            desastres naturais, anos de 1900 a 2023. Dados de \cite{emdat_2023}.}
+        \end{figure}    
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.40\textwidth}
+        \begin{exampleblock}{\small Classificação EM-DAT}
+            \begin{itemize}
+                \scriptsize
+                \item Hidrológicos: inundações, deslizamento de terra, ação de ondas;
+                \item Geofísicos: terremotos, movimento de massa, atividade vulcânica;
+                \item Meteorológicos: tempestades, temperatura extrema;
+                \item Climatológico: secas, incêndios. 
+            \end{itemize}
+        \end{exampleblock}
+    \end{minipage}
+\end{frame}
 
 \begin{frame}{Contextualização}
     \begin{figure}
         \centering
         \includegraphics[width=0.5\textwidth]{../dissertation-project/fig/disasters_data/world_accident_temperature_year.pdf}
-        \caption{Número de deslizamento de terra e média da temperatura global. Dados de \cite{emdat_2023,NASA/GISS}}
+        \caption{Número de deslizamento de terra e média da temperatura global. Dados de \cite{emdat_2023,NASA/GISS}.}
     \end{figure}
 \end{frame}
 
@@ -24,7 +38,7 @@
     \begin{figure}
         \centering
         \includegraphics[width=0.75\textwidth]{../dissertation-project/fig/geospatial_maps/world_2000-2023_accidents_country_filtered.pdf}
-        \caption{Número de desastres hidrológicos e geofísicos por país, anos 2000 a 2023. Dados de \cite{emdat_2023}}
+        \caption{Número de desastres hidrológicos e geofísicos por país, anos 2000 a 2023. Dados de \cite{emdat_2023}.}
     \end{figure}
 \end{frame}
 
@@ -32,7 +46,7 @@
     \begin{figure}
         \centering
         \includegraphics[width=0.6\textwidth]{../dissertation-project/fig/geospatial_maps/brazil_2000-2023_accidents_subtype_uf.pdf}
-        \caption{Movimentos de Massa por estados no Brasil, anos 2000 a 2023. Dados de \cite{emdat_2023}}
+        \caption{Movimentos de Massa por estados no Brasil, anos 2000 a 2023. Dados de \cite{emdat_2023}.}
     \end{figure}
 \end{frame}
 
@@ -81,60 +95,63 @@
 \subsection{Objetivos}
 
 \begin{frame}
-    \begin{exampleblock}{Objetivos}
-        \begin{itemize}
-            \item Simulação numérica;\pause
-            \item Resultado experimental (?);\pause
-            \item Escoamento de superfície livre;\pause
-            \item Fluido viscoplástico;\pause
-            \item Comportamento do escoamento sobre obstáculos;\pause
-            \item Regime de escoamento e regime hidráulico; \pause
-            \item Diferentes configurações de obstruções;\pause
-            \item Observação de diferentes modelos reológicos.
-        \end{itemize}
+    \begin{exampleblock}{\Large Objetivo}
+        \Large
+        Entendimento da dinâmica de um escoamento de superfície livre, 
+        de um fluido não newtoniano viscoplástico característico de um movimento de massa 
+        do tipo corrida detrítica, ao passar por sobre obstáculos submersos de diferentes formas e dimensões, 
+        através de modelagem numérica.
     \end{exampleblock}
 \end{frame}
+
+% \begin{frame}
+%     \begin{exampleblock}{Objetivos}
+%         \begin{itemize}
+%             \item Simulação numérica;\pause
+%             \item Resultado experimental (?);\pause
+%             \item Escoamento de superfície livre;\pause
+%             \item Fluido viscoplástico;\pause
+%             \item Comportamento do escoamento sobre obstáculos;\pause
+%             \item Regime de escoamento e regime hidráulico; \pause
+%             \item Diferentes configurações de obstruções;\pause
+%             \item Observação de diferentes modelos reológicos.
+%         \end{itemize}
+%     \end{exampleblock}
+% \end{frame}
 % ---------------------------------------------------------------------------------------------------- %
 
-\subsection{Organização do Trabalho}
+% \subsection{Organização do Trabalho}
 
-\begin{frame}
-    \begin{minipage}[c]{0.49\textwidth}
-        \begin{exampleblock}{Definição do Problema}
-            \begin{itemize}
-                \item Movimentos geofísicos de massa;
-                \item Escoamento em canais;
-                \item Escoamento de superfície livre.
-            \end{itemize}            
-        \end{exampleblock}
-        \hfill
-        \pause
-        \begin{exampleblock}{Reologia}
-            \begin{itemize}
-                \item Fluidos não newtonianos e suas propriedades; 
-                \item Modelo de fluido do tipo Herschel-Bulkley;
-                \item Equacionamento.
-            \end{itemize}
-        \end{exampleblock}
-    \end{minipage}    
-    \hfill
-    \begin{minipage}[c]{0.49\textwidth}
-        \pause
-        \begin{exampleblock}{Escoamento Sobre Estruturas}
-            \begin{itemize}
-                \item Interação entre o fluido e as estruturas submersas.
-            \end{itemize}
-        \end{exampleblock}
-        \hfill
-
-        \pause
-        \begin{exampleblock}{Metodologia Numérica}
-            \begin{itemize}
-                \item Solução de superfície livre;
-                \item Modelo bi-viscoso;
-                \item Geração das geometrias e malhas;
-                \item Condições de contorno.
-            \end{itemize}    
-        \end{exampleblock}
-    \end{minipage}
-\end{frame}
+% \begin{frame}
+%     \begin{minipage}[c]{0.49\textwidth}
+%         \begin{exampleblock}{Fundamentação}
+%             \begin{itemize}
+%                 \item Movimentos geofísicos de massa;
+%                 \item Escoamento em canais;
+%                 \item Escoamento de superfície livre;
+%                 \item Reologia.
+%             \end{itemize}            
+%         \end{exampleblock}
+%         \pause
+%         \begin{exampleblock}{Definição do Problema}
+%             \begin{itemize}
+%                 \item Definição do problema;
+%                 \item Hipóteses de simplificação;
+%                 \item Equacionamento;
+%                 \item Interação entre o fluido e as estruturas submersas.
+%             \end{itemize}
+%         \end{exampleblock}
+%     \end{minipage}    
+%     \hfill
+%     \begin{minipage}[c]{0.49\textwidth}
+%         \pause
+%         \begin{exampleblock}{Metodologia Numérica}
+%             \begin{itemize}
+%                 \item Escoamento de superfície livre;
+%                 \item Modelo bi-viscoso;
+%                 \item Geração das geometrias e malhas;
+%                 \item Condições de contorno.
+%             \end{itemize}    
+%         \end{exampleblock}
+%     \end{minipage}
+% \end{frame}

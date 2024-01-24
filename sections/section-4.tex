@@ -1,37 +1,81 @@
 \section{Escoamento Sobre Estrutura}
 
-\subsection{Adimensionais}
-
-\begin{frame}
-    
-   \begin{exampleblock}{Número de Froude}
-        \begin{equation}
-            Fr = \frac{U}{\sqrt{gh}} 
-            = \frac{\text{Forças Inerciais}}{\text{Forças Gravitacionais}}
-        \end{equation}        
-    \end{exampleblock}
-
-    \begin{exampleblock}{Número de Reynolds}
-        \begin{equation}
-            Re = \frac{\rho U L}{\mu} = \frac{4UR_h}{\nu} 
-            = \frac{\text{Forças Inerciais}}{\text{Forças Viscosas}}
-        \end{equation}        
-    \end{exampleblock}
-
-    \begin{exampleblock}{Reynolds canal aberto, fluido tipo HB}
-        \begin{equation}
-            Re_{HB} = \frac{8 \rho U^2}{\tau_c + K \left( \frac{2U}{R_h} \right)^n}
-        \end{equation}
-    \end{exampleblock}
-
+\begin{frame}{Características do escoamento}
+    \Large
+    \begin{itemize}
+        \item Escoamento uniforme;
+        \item Escoamento laminar;
+        \item Superfície livre;
+        \item Canal infinitamente largo.
+    \end{itemize}
 \end{frame}
 
-% \begin{frame}{Adimensionais}
+\subsection{Escoamento Sobre Estrutura}
 
-%     \begin{exampleblock}{Reynolds canal aberto, fluido tipo HB}
-%         \begin{equation}
-%             Re_{HB} = \frac{8 \rho U^2}{\tau_c + K \left( \frac{2U}{R_h} \right)^n}
-%         \end{equation}
+\begin{frame}{Definição do Problema}
+    \begin{minipage}[c]{0.49\textwidth}
+        \begin{exampleblock}{Plano inclinado, bidimensional}
+            \includegraphics[width=\textwidth]{../dissertation-project/fig/diagrams/free-surface_inclined-plane.pdf}
+            \captionof{figure}{Escoamento de superfície livre de altura $h$ em um plano infinitamente largo, com
+            velocidade uniforme.}
+        \end{exampleblock}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[c]{0.49\textwidth}
+        \begin{exampleblock}{Plano inclinado, "tridimensional"}
+            \includegraphics[width=\textwidth]{../dissertation-project/fig/diagrams/free-surface-obstacle.pdf}
+            \captionof{figure}{Escoamento incidindo sobre um corpo submerso retangular ao fundo do canal, com velocidade $u(y)$.}
+        \end{exampleblock}
+    \end{minipage}
+\end{frame}
+
+% \begin{frame}
+%     \begin{exampleblock}{Dinâmica do Escoamento}
+%         \begin{itemize}
+%             \item Comportamento da superfície livre;
+%             \item Coeficientes de arrasto e sustentação;
+%             \item Esforços sobre o obstáculo;
+%             \item Vazões na entrada do domínio;
+%             \item Forças em função da viscosidade do fluido.
+%         \end{itemize}
 %     \end{exampleblock}
-
 % \end{frame}
+
+% \begin{frame}
+%     \begin{exampleblock}{Definições Gerais}
+%         \begin{itemize}
+%             \item Escoamento laminar;
+%             \item Escoamento de superfície livre;
+%             \item Canal de fundo fixo;
+%             \item Diferentes tipos de obstáculos;
+%             \item Análise numérica.
+%         \end{itemize}    
+%     \end{exampleblock}
+% \end{frame}
+
+% \subsection{Hipóteses de Simplificação}
+
+\begin{frame}{Literatura}
+    \begin{itemize}
+        \large
+        \item Modelos lineares de fluidos invíscidos;
+        \item Domínio bidimensional;
+        \item Forma e disposição de obstáculos;
+        \item Regimes hidráulicos subcrítico, crítico e supercrítico;
+        \item Avaliações numéricas e experimental;
+        \item Aplicação de fluidos não newtonianos;
+        \item Números de Reynolds e de Froude para caracterizar efeitos viscosos.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Objetivos da modelagem numérica}
+    \begin{itemize}
+        \large
+        \item Análise do comportamento da superfície livre;
+        \item Determinação dos coeficientes de arrasto e sustentação em diferentes condições de escoamento;
+        \item Avaliação dos esforços induzidos no obstáculo submerso;
+        \item Variações de vazão na entrada do domínio e seus efeitos na dinâmica do escoamento;
+        \item Cálculo dos números adimensionais para caracterizar o escoamento ao longo do domínio;
+        \item Quantificação das forças viscosas em função de diferentes modelos reológicos.
+    \end{itemize}
+\end{frame}
