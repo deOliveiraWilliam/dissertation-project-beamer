@@ -37,7 +37,7 @@
                                         & (\SI{}{\cubic\meter})                                & (\unit[per-mode = symbol]{\metre\per\second})                                 & (\SI{}{\kilo \meter})             \\ \hline
                 Deslizamento de terra   & 10 $\sim$ 10\textsuperscript{6}                       & 10\textsuperscript{-6} $\sim$ 10       & $<$ 0,3          \\
                 Desmoronamento          & 2 $\times$ 10\textsuperscript{5}                      & \textemdash                                     & 0,7              \\
-                Corridas Detríticas     & 10\textsuperscript{3} $\sim$ 10\textsuperscript{6}    & 0,5 $\sim$ 20                          & 0,2 $\sim$ 10    \\
+                \textcolor{red}{Corridas Detríticas}     & \textcolor{red}{10\textsuperscript{3} $\sim$ 10\textsuperscript{6}}    & \textcolor{red}{0,5 $\sim$ 20 }   & \textcolor{red}{0,2 $\sim$ 10}    \\
                 Avalanches Detríticas   & 10\textsuperscript{7} $\sim$ 10\textsuperscript{10}   & 10 $\sim$ 10\textsuperscript{2}        & < 30             \\
                     \hline
             \end{tabular}
@@ -104,6 +104,31 @@
     \centering
     \includegraphics[width=0.65\textwidth]{../dissertation-project/fig/diagrams/water-debris_classification.pdf}
     \captionof{figure}{Classificação reológica de misturas de água e detritos. Adaptado de \cite{coussot_1997_mudflow}.}
+\end{frame}
+
+\subsection{Adimensionais}
+
+\begin{frame}
+
+    \begin{exampleblock}{Modelo de fluido tipo HB}
+        \begin{equation}
+            \label{eq:HB_shear_stress}
+            \begin{split}
+                \tau &= \yieldstress + K \shearrate^n
+                \text{ ,\hspace{0.5 cm} quando \hspace{0.2cm}} \shearrate = \partialderiv{u}{y} \ne 0
+                \\
+                \tau &\leq \yieldstress
+                \text{ ,\hspace{1.65cm} quando \hspace{0.2cm}} \shearrate = 0
+            \end{split}
+        \end{equation}
+    \end{exampleblock}
+
+    \begin{exampleblock}{Reynolds canal aberto, fluido tipo HB}
+        \begin{equation}
+            Re_{HB} = \frac{8 \rho U^2}{\tau_c + K \left( \frac{2U}{R_h} \right)^n}
+        \end{equation}
+    \end{exampleblock}
+
 \end{frame}
 
 \subsection{Equacionamento}
@@ -175,29 +200,4 @@
             \label{eq:dimensionaless_velocity_distribution}
         \end{equation}        
     \end{minipage}
-\end{frame}
-
-\subsection{Adimensionais}
-
-\begin{frame}
-
-    \begin{exampleblock}{Modelo de fluido tipo HB}
-        \begin{equation}
-            \label{eq:HB_shear_stress}
-            \begin{split}
-                \tau &= \yieldstress + K \shearrate^n
-                \text{ ,\hspace{0.5 cm} quando \hspace{0.2cm}} \shearrate = \partialderiv{u}{y} \ne 0
-                \\
-                |\tau| &\leq \yieldstress
-                \text{ ,\hspace{1.65cm} quando \hspace{0.2cm}} \shearrate = 0
-            \end{split}
-        \end{equation}
-    \end{exampleblock}
-
-    \begin{exampleblock}{Reynolds canal aberto, fluido tipo HB}
-        \begin{equation}
-            Re_{HB} = \frac{8 \rho U^2}{\tau_c + K \left( \frac{2U}{R_h} \right)^n}
-        \end{equation}
-    \end{exampleblock}
-
 \end{frame}

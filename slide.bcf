@@ -2398,6 +2398,16 @@
     <bcf:citekey order="33" intorder="1">coussot_1997_mudflow</bcf:citekey>
     <bcf:citekey order="34" intorder="1">coussot_1997_mudflow</bcf:citekey>
     <bcf:citekey order="35" intorder="1">coussot_1997_mudflow</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">Lawrence1987</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">Forbes1982</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">Vanden-Broeck1987</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">King1987</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">Forbes1988</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">Fadda1997</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">Bush1994</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">Singh2000</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">Bernabeu2018</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">Hinton2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
