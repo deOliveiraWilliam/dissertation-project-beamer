@@ -13,14 +13,14 @@
     \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Método VOF}
-    O método Volume de Fluido, no inglês \textit{Volume of Fluid} (VOF), é usado para capturar a superfície livre do escoamento. A dependência temporal da fase $\alpha$, para um problema bidimensional, é governada pela Eq.~\ref{eq:alpha_phase}.
+% \begin{frame}{Método VOF}
+%     O método Volume de Fluido, no inglês \textit{Volume of Fluid} (VOF), é usado para capturar a superfície livre do escoamento. A dependência temporal da fase $\alpha$, para um problema bidimensional, é governada pela Eq.~\ref{eq:alpha_phase}.
 
-    \begin{equation} \label{eq:alpha_phase}
-        \partialderiv{\alpha}{t} + u \partialderiv{\alpha}{x} + v \partialderiv{\alpha}{y} = 0
-    \end{equation}
+%     \begin{equation} \label{eq:alpha_phase}
+%         \partialderiv{\alpha}{t} + u \partialderiv{\alpha}{x} + v \partialderiv{\alpha}{y} = 0
+%     \end{equation}
 
-\end{frame}
+% \end{frame}
 
 \begin{frame}{Método VOF} 
     \centering
@@ -37,27 +37,26 @@
 
 \end{frame}
 
-\begin{frame}{Geração das Geometrias}
-    \begin{minipage}[c]{0.55\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{../dissertation-project/fig/diagrams/stl_python.png}
-        \captionof{figure}{Algoritmo de geração das geometrias.}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[c]{0.43\textwidth}
-        \begin{exampleblock}{Etapas}
-            \begin{enumerate}
-                \item Vértices frontais sem obstáculo; \pause
-                \item Referência dos obstáculos; \pause
-                \item Inserir obstáculo, 3 objetos; \pause
-                \item Vértices posteriores por offset; \pause
-                \item Ligação dos vértices; \pause
-                \item Criação das faces; \pause
-                \item Geração dos arquivos em STL.
-            \end{enumerate}
-        \end{exampleblock}
-    \end{minipage}
-    \end{frame}
+% \begin{frame}{Geração das Geometrias}
+%     \begin{minipage}[c]{0.55\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{../dissertation-project/fig/diagrams/stl_python.png}
+%         \captionof{figure}{Algoritmo de geração das geometrias.}
+%     \end{minipage}
+%     \hfill
+%     \begin{minipage}[c]{0.43\textwidth}
+%         \begin{exampleblock}{Etapas}
+%             \begin{enumerate}
+%                 \item Vértices frontais, sem obstáculo; \pause
+%                 \item Dimensões e quantidade de obstáculos a serem inseridos; \pause
+%                 \item Inserir obstáculo conforme a forma; \pause
+%                 \item Vértices posteriores; \pause
+%                 \item Criação das faces (nomenclatura); \pause
+%                 \item Geração dos arquivos em STL.
+%             \end{enumerate}
+%         \end{exampleblock}
+%     \end{minipage}
+%     \end{frame}
 
 
 \begin{frame}{Geometria}
@@ -75,42 +74,42 @@
 \end{frame}
 
 
-\begin{frame}{Condições de Contorno}
-    \begin{minipage}[c]{0.45\textwidth}
-            \begin{table}[ht]
-                \centering
-                \caption{Condições de Contorno para a geometria inicial proposta.}
-                \scriptsize
-                \begin{tabular}{llll}
-                \toprule
-                Boundary                                                                       & Field    & Type      & Value \\ 
-                \midrule
-                \multirow{3}{*}{Inlet}                                                         & $\alpha$ & Dirichlet & $ \alpha = 1 $                                   \\ 
-                                                                                               & $p$      & Neumann   & $\bm{n} \cdot \nabla p = 0 $                     \\  
-                                                                                               & $U$      & Dirichlet & $ u = u_0 $                                      \\ 
-                \midrule
-                \multirow{3}{*}{Outlet}                                                        & $\alpha$ & Dirichlet & $ \alpha = 1 $                                   \\ 
-                                                                                               & $p$      & Dirichlet & $ p = 0 $                                        \\  
-                                                                                               & $U$      & Neumann   & $\bm{n} \cdot \nabla \velvector = 0 $            \\
-                \midrule
-                \multirow{3}{*}{Obstacle}                                                      & $\alpha$ & Neumann   & $ \alpha = 0 $                                   \\ 
-                                                                                               & $p$      & Neumann   & $\bm{n} \cdot \nabla p = 0 $                     \\  
-                                                                                               & $U$      & Dirichlet & $ u(y=0) = 0 $                                   \\
-                \midrule
-                \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Walls,\\ Bottom Walls\end{tabular}} & $\alpha$ & Neumann   & $ \alpha = 0 $                                   \\ 
-                                                                                               & $p$      & Neumann   & $ \bm{n} \cdot \nabla p = 0 $                    \\  
-                                                                                               & $U$      & Dirichlet & $ u(y=0) = 0 $                                   \\
-                \bottomrule
-                \end{tabular} \label{tab:boundary_conditions}
-                \end{table}
-    \end{minipage}
-    \hfill
-    \begin{minipage}[c]{0.50\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{../dissertation-project/fig/png/bc_paraview.png}
-        \captionof{figure}{Condições de Contorno.}
-    \end{minipage}
-\end{frame}
+% \begin{frame}{Condições de Contorno}
+%     \begin{minipage}[c]{0.45\textwidth}
+%             \begin{table}[ht]
+%                 \centering
+%                 \caption{Condições de Contorno para a geometria inicial proposta.}
+%                 \scriptsize
+%                 \begin{tabular}{llll}
+%                 \toprule
+%                 Boundary                                                                       & Field    & Type      & Value \\ 
+%                 \midrule
+%                 \multirow{3}{*}{Inlet}                                                         & $\alpha$ & Dirichlet & $ \alpha = 1 $                                   \\ 
+%                                                                                                & $p$      & Neumann   & $\bm{n} \cdot \nabla p = 0 $                     \\  
+%                                                                                                & $U$      & Dirichlet & $ u = u_0 $                                      \\ 
+%                 \midrule
+%                 \multirow{3}{*}{Outlet}                                                        & $\alpha$ & Dirichlet & $ \alpha = 1 $                                   \\ 
+%                                                                                                & $p$      & Dirichlet & $ p = 0 $                                        \\  
+%                                                                                                & $U$      & Neumann   & $\bm{n} \cdot \nabla \velvector = 0 $            \\
+%                 \midrule
+%                 \multirow{3}{*}{Obstacle}                                                      & $\alpha$ & Neumann   & $ \alpha = 0 $                                   \\ 
+%                                                                                                & $p$      & Neumann   & $\bm{n} \cdot \nabla p = 0 $                     \\  
+%                                                                                                & $U$      & Dirichlet & $ u(y=0) = 0 $                                   \\
+%                 \midrule
+%                 \multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Walls,\\ Bottom Walls\end{tabular}} & $\alpha$ & Neumann   & $ \alpha = 0 $                                   \\ 
+%                                                                                                & $p$      & Neumann   & $ \bm{n} \cdot \nabla p = 0 $                    \\  
+%                                                                                                & $U$      & Dirichlet & $ u(y=0) = 0 $                                   \\
+%                 \bottomrule
+%                 \end{tabular} \label{tab:boundary_conditions}
+%                 \end{table}
+%     \end{minipage}
+%     \hfill
+%     \begin{minipage}[c]{0.50\textwidth}
+%         \centering
+%         \includegraphics[width=\textwidth]{../dissertation-project/fig/png/bc_paraview.png}
+%         \captionof{figure}{Condições de Contorno.}
+%     \end{minipage}
+% \end{frame}
 
 \begin{frame}{Malha Numérica}
     \begin{minipage}[c]{0.68\textwidth}
